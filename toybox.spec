@@ -2,7 +2,7 @@
 
 Name: toybox
 Version: 0.5.2
-Release: 1
+Release: 2
 Source0: http://landley.net/toybox/downloads/%{name}-%{version}.tar.gz
 Summary: A number of standard command line tools
 URL: http://landley.net/toybox/
@@ -18,7 +18,10 @@ the command line tools in coreutils and more.
 %prep
 %setup -q
 make defconfig HOSTCC="cc -std=gnu89"
-
+# Enable some more toys
+sed -i \
+	-e 's,# CONFIG_EXPR is not set,CONFIG_EXPR=y,' \
+	.config
 
 %build
 %make \
