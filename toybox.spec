@@ -21,6 +21,7 @@ make defconfig HOSTCC="cc -std=gnu89"
 # Enable some more toys
 sed -i \
 	-e 's,# CONFIG_EXPR is not set,CONFIG_EXPR=y,' \
+	-e 's,# CONFIG_TR is not set,CONFIG_TR=y,' \
 	.config
 
 %build
