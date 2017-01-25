@@ -29,7 +29,7 @@ sed -i \
 	-e 's,CONFIG_TOYBOX_UID_USR=.*,CONFIG_TOYBOX_UID_USR=1000,' \
 	.config
 
-# (tpg) disable these as they are in until-linux, procps-ng, grep, findutils  etc.
+# (tpg) disable these as they are in util-linux, procps-ng, grep, findutils  etc.
 for i in ACPI BLKID BLOCKDEV BUNZIP2 BZCAT CAL CHATTR CKSUM CLEAR CMP \
     COUNT CPIO DMESG DOS2UNIX EGREP EJECT FALLOCATE FGREP FILE FIND \
     FLOCK FREE FSFREEZE GREP HELP HEXEDIT HOSTNAME HWCLOCK IFCONFIG \
@@ -40,7 +40,7 @@ for i in ACPI BLKID BLOCKDEV BUNZIP2 BZCAT CAL CHATTR CKSUM CLEAR CMP \
     STRINGS SU SWAPOFF SWAPON SWITCH_ROOT SYSCTL TASKSET TIME TOP ULIMIT \
     UMOUNT UNIX2DOS UNSHAR EUPTIME USLEEP UUDECODE UUENCODE VCONFIG VMSTAT \
     W WHICH XARGS XXD; do
-    sed -i -e "s,^CONFIG_$i=.*,CONFIG_$i=n," .config
+    sed -i -e "s,^CONFIG_$i=.*,# CONFIG_$i is not set," .config
 done
 
 %build
