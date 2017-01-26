@@ -65,7 +65,12 @@ the command line tools in coreutils and more.
 %prep
 %setup -q
 %setup_compile_flags
-make defconfig HOSTCC="%{__cc}"
+make defconfig \
+%if ! %cross_compiling
+	HOSTCC="%{__cc}"
+%else
+	HOSTCC=clang
+%endif
 
 # adjust some settings
 sed -i \
