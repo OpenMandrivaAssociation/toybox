@@ -27,13 +27,16 @@
 
 Name: toybox
 Version: 0.7.6
-Release: 1
+Release: 2
 Source0: http://landley.net/toybox/downloads/%{name}-%{version}.tar.gz
 Summary: A number of standard command line tools
 URL: http://landley.net/toybox/
 License: BSD
 Group: System/Base
+BuildRequires: pkgconfig(libbsd)
+%if %{with coreutils}
 Conflicts: coreutils
+%endif
 %if %{with acpi}
 Conflicts: acpi
 %endif
