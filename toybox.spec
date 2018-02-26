@@ -26,7 +26,7 @@
 %bcond_with which
 
 Name: toybox
-Version: 0.7.5
+Version: 0.7.6
 Release: 1
 Source0: http://landley.net/toybox/downloads/%{name}-%{version}.tar.gz
 Summary: A number of standard command line tools
