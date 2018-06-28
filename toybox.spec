@@ -5,13 +5,13 @@
 %bcond_with cpio
 %bcond_without coreutils
 %bcond_with diffutils
-%bcond_with dos2unix
+%bcond_without dos2unix
 %bcond_with e2fsprogs
-%bcond_with eject
+%bcond_without eject
 %bcond_with file
 %bcond_with findutils
 %bcond_with grep
-%bcond_with hostname
+%bcond_without hostname
 %bcond_with kmod
 %bcond_with nc
 %bcond_with net_tools
@@ -21,13 +21,13 @@
 %bcond_with rfkill
 %bcond_with sed
 %bcond_with sharutils
-%bcond_with time
+%bcond_without time
 %bcond_with util_linux
-%bcond_with which
+%bcond_without which
 
 Name: toybox
-Version: 0.7.6
-Release: 2
+Version: 0.7.7
+Release: 1
 Source0: http://landley.net/toybox/downloads/%{name}-%{version}.tar.gz
 Summary: A number of standard command line tools
 URL: http://landley.net/toybox/
