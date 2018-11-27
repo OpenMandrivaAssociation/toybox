@@ -26,7 +26,7 @@
 %bcond_without which
 
 Name: toybox
-Version: 0.7.7
+Version: 0.7.8
 Release: 1
 Source0: http://landley.net/toybox/downloads/%{name}-%{version}.tar.gz
 Summary: A number of standard command line tools
@@ -66,7 +66,7 @@ Toybox comes with smaller, but almost fully functional, replacements of
 the command line tools in coreutils and more.
 
 %prep
-%setup -q
+%autosetup -p1
 %setup_compile_flags
 make defconfig \
 %if ! %cross_compiling
@@ -170,7 +170,7 @@ for i in $DISABLED; do
 done
 
 %build
-%make
+%make_build
 
 %install
 PREFIX="%{buildroot}" scripts/install.sh --symlink --force --long
