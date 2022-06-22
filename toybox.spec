@@ -27,7 +27,7 @@
 
 Name: toybox
 Version:	0.8.1
-Release:	1
+Release:	2
 Source0: http://landley.net/toybox/downloads/%{name}-%{version}.tar.gz
 Summary: A number of standard command line tools
 URL: http://landley.net/toybox/
