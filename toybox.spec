@@ -25,11 +25,11 @@
 %bcond_with util_linux
 %bcond_without which
 
-Name: toybox
-Version:	0.8.1
-Release:	2
-Source0: http://landley.net/toybox/downloads/%{name}-%{version}.tar.gz
 Summary: A number of standard command line tools
+Name: toybox
+Version: 0.8.7
+Release: 1
+Source0: http://landley.net/toybox/downloads/%{name}-%{version}.tar.gz
 URL: http://landley.net/toybox/
 License: BSD
 Group: System/Base
@@ -67,7 +67,7 @@ the command line tools in coreutils and more.
 
 %prep
 %autosetup -p1
-%setup_compile_flags
+%set_build_flags
 make defconfig \
 %if ! %cross_compiling
 	HOSTCC="%{__cc}"
