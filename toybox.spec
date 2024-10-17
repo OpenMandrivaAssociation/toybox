@@ -30,7 +30,7 @@ Name: toybox
 Version: 0.8.7
 Release: 1
 Source0: http://landley.net/toybox/downloads/%{name}-%{version}.tar.gz
-URL: http://landley.net/toybox/
+URL: https://landley.net/toybox/
 License: BSD
 Group: System/Base
 BuildRequires: pkgconfig(libbsd)
