@@ -33,6 +33,7 @@ Source0: http://landley.net/toybox/downloads/%{name}-%{version}.tar.gz
 URL: https://landley.net/toybox/
 License: BSD
 Group: System/Base
+BuildRequires:	make
 BuildRequires: pkgconfig(libbsd)
 %if %{with coreutils}
 Conflicts: coreutils
