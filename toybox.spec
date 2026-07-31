@@ -27,7 +27,7 @@
 
 Summary: A number of standard command line tools
 Name: toybox
-Version: 0.8.7
+Version: 0.8.14
 Release: 1
 Source0: http://landley.net/toybox/downloads/%{name}-%{version}.tar.gz
 URL: https://landley.net/toybox/
