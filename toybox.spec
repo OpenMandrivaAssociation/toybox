@@ -180,4 +180,4 @@ PREFIX="%{buildroot}" scripts/install.sh --symlink --force --long
 /bin/*
 /sbin/*
 %{_bindir}/*
-%{_sbindir}/*
+#{_sbindir}/*
